@@ -27,6 +27,15 @@ const Navbar = () => {
           >
             DC
           </NavLink>
+          <NavLink
+            activeClassName="active"
+            className="nav-item nav-link "
+            exact
+            to="/search"
+          >
+            Search
+          </NavLink>
+
         </ul>
       {/* </div> */}
 
@@ -42,6 +51,7 @@ const Navbar = () => {
           </NavLink>
         </ul>
       </div>
+      <div className="animation start-home"></div>
     </nav>
   );
 };
