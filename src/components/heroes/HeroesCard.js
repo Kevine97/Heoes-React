@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TypeRutas from "../../types/TypeRutas";
 
 const HeroesCard = ({
   id,
   superhero,
-  publisher,
   alter_ego,
   first_appearance,
   characters,
@@ -31,7 +31,7 @@ const HeroesCard = ({
             </p>
 
             <div className="">
-              <Link className="badge badge-secondary py-2" to={`./hero/${id}`}>
+              <Link className="badge badge-secondary py-2" to={TypeRutas.heroXId + id}>
               <i className="fas fa-arrow-right"></i>
               </Link>
             </div>

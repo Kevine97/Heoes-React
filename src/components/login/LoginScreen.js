@@ -6,7 +6,7 @@ const LoginScreen = ({ history }) => {
   const { dispatch } = useContext(AuthContext);
 
   const [name, setName] = useState("");
-  console.log(name);
+
   const handleLogin = (e) => {
     e.preventDefault();
     // history.push("/");

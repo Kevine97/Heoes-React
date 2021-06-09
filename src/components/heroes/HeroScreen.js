@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { useParams, Redirect, withRouter } from "react-router-dom";
 import HeroesById from "../../selectors/HeroesById";
+import TypeRutas from "../../types/TypeRutas";
 
 const HeroScreen = ({ history }) => {
   window.scrollTo(0, 0)
@@ -9,7 +10,7 @@ const HeroScreen = ({ history }) => {
   const { heroeId } = useParams();
   const hero = useMemo(() => HeroesById(heroeId), [heroeId]);
   if (!hero || hero.length === 0) {
-    return <Redirect to="/" />;
+    return <Redirect to={TypeRutas.home} />;
   }
 
   const { superhero, publisher, alter_ego, first_appearance, characters } =
@@ -19,7 +20,7 @@ const HeroScreen = ({ history }) => {
     e.preventDefault();
 
     if (history.length <= 2) {
-      publisher === "DC Comics" ? history.push("/dc") : history.push("/marvel");
+      publisher === "DC Comics" ? history.push(TypeRutas.dc) : history.push(TypeRutas.marvel);
     } else {
       history.goBack();
     }

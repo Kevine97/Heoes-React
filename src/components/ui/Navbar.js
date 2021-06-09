@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, NavLink, withRouter } from "react-router-dom";
 import AuthContext from "../../auth/AuthContext";
+import TypeRutas from "../../types/TypeRutas";
 import Types from "../../types/Types";
 
 const Navbar = ({ history }) => {
@@ -14,7 +15,7 @@ const Navbar = ({ history }) => {
     dispatch({
       type: Types.logout,
     });
-    history.replace("/login");
+    history.replace(TypeRutas.login);
   };
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark py-3">
@@ -28,7 +29,7 @@ const Navbar = ({ history }) => {
           activeClassName="active"
           className="nav-item nav-link"
           exact
-          to="/marvel"
+          to={TypeRutas.marvel}
         >
           Marvel
         </NavLink>
@@ -37,7 +38,7 @@ const Navbar = ({ history }) => {
           activeClassName="active"
           className="nav-item nav-link "
           exact
-          to="/dc"
+          to={TypeRutas.dc}
         >
           DC
         </NavLink>
@@ -45,7 +46,7 @@ const Navbar = ({ history }) => {
           activeClassName="active"
           className="nav-item nav-link "
           exact
-          to="/search"
+          to={TypeRutas.search}
         >
           Search
         </NavLink>

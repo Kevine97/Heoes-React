@@ -7,10 +7,15 @@ import GetHeroeByName from "../../selectors/GetHeroeByName";
 
 const SearchScreen = ({ history }) => {
   const location = useLocation();
+
   const { q = "" } = querystring.parse(location.search);
+
   const [{ hero }, handleInputChange] = useForm({ hero: q });
+
+
   //const heroeFilter = useMemo(() =>  GetHeroeByName(hero), [hero])
   const heroeFilter = GetHeroeByName(hero)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     history.push(`?q=${hero}`);
