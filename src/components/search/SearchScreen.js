@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import querystring from "query-string";
 import { useLocation, withRouter } from "react-router-dom";
 import useForm from "../../hooks/useForm";
