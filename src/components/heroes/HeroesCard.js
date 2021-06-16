@@ -21,7 +21,7 @@ const HeroesCard = ({
         </div>
         <div className="col-md-8">
           <div className="card-body">
-            <h5 className="card-title font-weight-bold">{superhero}</h5>
+            <h5 className="card-title font-weight-bold dcCard">{superhero}</h5>
             <p className="card-text">{alter_ego}</p>
             {alter_ego !== characters && (
               <p className="card-text">{characters}</p>

@@ -27,15 +27,15 @@ const HeroScreen = ({ history }) => {
   };
 
   return (
-    <div className="row mt-5">
-      <div className="col-4">
+    <div className="container-fluid row mt-5">
+      <div className="col-lg-3 col-md-12 col-sm-12 mx-auto">
         <img
           src={`../assets/heroes/${heroeId}.jpg`}
           alt={superhero}
           className="img-thumbnail img-fluid animate__animated animate__fadeIn"
         />
       </div>
-      <div className="col-8 animate__animated animate__flipInX">
+      <div className="col-lg-8 col-md-12 col-sm-12 mx-auto animate__animated animate__flipInX">
         <h3>{superhero}</h3>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">

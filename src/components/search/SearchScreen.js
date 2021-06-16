@@ -22,12 +22,12 @@ const SearchScreen = ({ history }) => {
     
   };
   return (
-    <div>
+    <div  className="container-fluid mt-5">
       <h1>Search Screen</h1>
       <hr />
 
-      <div className="row">
-        <div className="col-5">
+      <div className="row  bg-white  py-5">
+        <div className="col-lg-5 col-md-12 col-sm-12 mx-auto">
           <h4>Search Form</h4>
           <hr />
 
@@ -42,11 +42,11 @@ const SearchScreen = ({ history }) => {
               onChange={handleInputChange}
             />
 
-            <button className="btn m-1 btn-block btn-dark"> Search...</button>
+            <button className="btn btn-primary btn-block m-1 btn-block"> Search...</button>
           </form>
         </div>
 
-        <div className="col-7">
+        <div className="col-lg-5 col-md-12 col-sm-12 mx-auto">
           <h4>Results</h4>
 
           {

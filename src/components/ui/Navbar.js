@@ -18,54 +18,61 @@ const Navbar = ({ history }) => {
     history.replace(TypeRutas.login);
   };
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark py-3">
-      <Link className="navbar-brand" to="/">
-        Heroes app
-      </Link>
+<nav className="navbar navbar-expand-lg navbar-dark  py-3 activate">
+    <Link className="navbar-brand logo ml-5" to={TypeRutas.home}>
+        Her<img src="./assets/heroes/icons8_hulk_5.ico" className="logoImagen"/>es
+        </Link>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
 
-      {/* <div className="navbar-collapse "> */}
-      <ul className="navbar-nav ml-auto">
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
         <NavLink
-          activeClassName="active"
-          className="nav-item nav-link"
-          exact
-          to={TypeRutas.marvel}
-        >
-          Marvel
-        </NavLink>
-
+        activeClassName="active"
+        className="nav-item nav-link"
+        exact
+        to={TypeRutas.marvel}
+      >
+        Marvel
+      </NavLink>
+      </li>
+      <li className="nav-item">
         <NavLink
-          activeClassName="active"
-          className="nav-item nav-link "
-          exact
-          to={TypeRutas.dc}
-        >
-          DC
-        </NavLink>
+        activeClassName="active"
+        className="nav-item nav-link "
+        exact
+        to={TypeRutas.dc}
+      >
+        DC
+      </NavLink>
+      </li>
+      <li className="nav-item">
         <NavLink
-          activeClassName="active"
-          className="nav-item nav-link "
-          exact
-          to={TypeRutas.search}
-        >
-          Search
-        </NavLink>
-      </ul>
-      {/* </div> */}
-
-      <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-        <ul className="navbar-nav ml-auto">
-          <span className="nav-item nav-link mr-5 text-white">{name}</span>
+        activeClassName="active"
+        className="nav-item nav-link "
+        exact
+        to={TypeRutas.search}
+      >
+        Search
+      </NavLink>
+      </li>
+    </ul>
+    <div className="form-inline my-2 my-lg-0">
+        <span className="nav-item nav-link mr-5 text-white d-flex justify-content-center align-items-center userBienvenido">
+            <img src="./assets/heroes/faviconJocker.ico"/>{" "}
+            Super Heroe: <b className="ml-2">{name}</b>
+          </span>
           <button
             className="btn btn-primary nav-item nav-link text-white"
             onClick={handleLogout}
           >
             Logout
           </button>
-        </ul>
-      </div>
-      <div className="animation start-home"></div>
-    </nav>
+    </div>
+  </div>
+</nav>
   );
 };
 
