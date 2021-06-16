@@ -18,7 +18,7 @@ const Navbar = ({ history }) => {
     history.replace(TypeRutas.login);
   };
   return (
-<nav className="navbar navbar-expand-lg navbar-dark  py-3 activate">
+<nav className="navbar navbar-expand-lg navbar-dark activate">
     <Link className="navbar-brand logo ml-5" to={TypeRutas.home}>
         Her<img src="./assets/heroes/icons8_hulk_5.ico" className="logoImagen"/>es
         </Link>
